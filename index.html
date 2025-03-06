@@ -1,0 +1,463 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S-HOUSE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Exo:ital,wght@0,300;0,400;1,300&family=Inter:wght@300&family=Nanum+Gothic+Coding&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,wght@1,300&family=Sora:wght@100..800;700&display=swap">
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="navbar navbar-expand-xl">
+    <div class="container-fluid">
+      <!-- ロゴ -->
+      <a class="navbar-brand" href="#">
+        <h1>S - H</h1>
+      </a>
+
+      <!-- ハンバーガーメニュー -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="pcNav">
+        <!-- ナビゲーションメニュー -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="d-lg-flex col-lg-3 justify-content-end w-100">
+            <div class="culumn">
+              <!-- 上部リンク -->
+              <ul class="navbar-nav ms-auto justify-content-end">
+                <li class="nav-item"><a class="nav-link" href="#">ACCESS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 82 19" class="instagram">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #1a1a1a;
+                          }
+
+                          .cls-1,
+                          .cls-2 {
+                            stroke-width: 0px;
+                          }
+
+                          .cls-2 {
+                            fill: #fff;
+                          }
+                        </style>
+                      </defs>
+                      <path class="cls-2" d="M-911-29h1180v128h-1180z" />
+                      <path class="cls-1"
+                        d="M12.24 2.86c-.52 0-.94.42-.94.94s.42.94.94.94.94-.42.94-.94-.42-.94-.94-.94zM8.07 4.06c-2.17 0-3.94 1.77-3.94 3.94s1.77 3.94 3.94 3.94 3.94-1.77 3.94-3.94-1.77-3.94-3.94-3.94zm0 6.46c-1.39 0-2.52-1.13-2.52-2.52s1.13-2.52 2.52-2.52 2.52 1.13 2.52 2.52-1.13 2.52-2.52 2.52zM11.19 16h-6.39c-2.65 0-4.81-2.16-4.81-4.81v-6.39c.01-2.64 2.17-4.8 4.82-4.8h6.39c2.65 0 4.81 2.16 4.81 4.81v6.39c0 2.65-2.16 4.81-4.81 4.81zm-6.38-14.49c-1.82 0-3.3 1.48-3.3 3.3v6.39c0 1.82 1.48 3.3 3.3 3.3h6.39c1.82 0 3.3-1.48 3.3-3.3v-6.39c0-1.82-1.48-3.3-3.3-3.3h-6.39zM50.51 7.25c.12-.14.26-.44.39-.43.35.02.7.15 1.03.28.07.03.1.25.1.38 0 1.34-.04 2.69-.03 4.03 0 .33.07.67.17.98.18.57.64.64 1.01.18.3-.37.45-.78.39-1.28-.13-1.03-.05-2.04.31-3.02.22-.59.55-1.1 1.06-1.49.68-.52 1.56-.44 2.15.2l.2.23.07-.04c.08-.54.14-.58.69-.47l.34.09c.29.07.39.25.38.55-.03 1.39-.04 2.78-.05 4.18v.37l.12.05.08-.16c.63-.94 1.17-1.93 1.48-3.03.07-.25.09-.45-.12-.67-.31-.33-.26-.75-.1-1.14.14-.33.4-.53.76-.57.55-.06.84.22.82.76l-.03.35c.32-.05.62-.1.92-.16l.66-.13c.72-.08 1.04.3.89 1.01-.15.68-.29 1.37-.39 2.06-.11.71-.04 1.41.23 2.07.09.22.32.5.5.52.21.02.49-.19.67-.37.22-.24.32-.55.26-.92-.2-1.13-.13-2.25.27-3.34.23-.64.57-1.21 1.2-1.54.72-.38 1.54-.21 2.06.42l.16.19c.08-.18.14-.48.22-.48.33-.02.67.02.99.1.26.06.28.3.28.55-.01 1.4-.02 2.81 0 4.21 0 .29.09.59.2.86.16.4.56.48.86.17.42-.44.72-.94.72-1.58 0-1.36 0-2.71.01-4.07 0-.45.06-.5.49-.43l.14.02c.7.09.74.14.74.85v1.91l.09.02.18-.5c.22-.59.43-1.19.67-1.77.23-.55.4-.64.88-.54.61.13.92.45.94.95.04.93.08 1.85.13 2.78 0 .07.02.14.09.22l.08-.22c.32-1.07.61-2.15.95-3.21.18-.55.45-.65 1-.48.19.06.38.14.55.24.29.16.42.41.42.76-.02 1.18-.04 2.35 0 3.53.01.42.13.85.27 1.24.06.16.29.36.45.37.16 0 .4-.17.48-.33.16-.32.23-.7.36-1.04.05-.12.18-.2.28-.3.05.12.16.25.14.35-.07.47-.13.94-.3 1.38-.2.52-.62.83-1.21.84-.59.01-1.03-.25-1.31-.77-.37-.66-.46-1.4-.49-2.14-.03-.7-.01-1.4-.02-2.11 0-.13 0-.25-.08-.41-.06.1-.13.2-.17.31-.54 1.23-.81 2.53-.92 3.87-.02.24.09.54-.27.66-.37.12-.8.06-.98-.29-.2-.39-.36-.83-.41-1.27-.12-.98-.16-1.97-.23-2.95l-.06-.38c-.14.2-.24.31-.3.43-.56 1.11-.78 2.31-.88 3.54l-.06 1.07c0 .09 0 .21-.06.27-.32.33-.71.18-1.08.13-.25-.04-.45-.15-.47-.45l-.05-.58c-.45.65-.88 1.19-1.67 1.07-.77-.11-1.1-.68-1.29-1.46-.45.76-.97 1.31-1.81 1.44-.91.15-1.47-.3-1.9-1.09l-.22.34c-.59.93-1.65 1.04-2.41.22-.49-.53-.75-1.18-.73-1.89.02-.86.15-1.72.24-2.59l.08-.43c-.38 0-.72-.02-1.06.01-.08 0-.19.14-.22.23-.55 1.59-1.44 2.96-2.47 4.27-.11.14-.17.36-.18.54-.06 1.07-.06 2.14-.16 3.2-.06.64-.32 1.24-.79 1.72-.67.67-1.73.84-2.57.42-.76-.38-1.12-1.27-.71-2.07.3-.59.74-1.13 1.19-1.63.45-.5.96-.96 1.48-1.39.35-.28.34-.58.2-1-.47.65-1.04 1.09-1.83 1.15-.85.07-1.31-.5-1.75-1.15-.4.61-.78 1.24-1.63 1.13-.8-.11-1.15-.68-1.36-1.48-.5.93-1.19 1.53-2.22 1.48-1.12-.06-1.47-.95-1.78-1.91-.08.17-.12.28-.19.37-.25.37-.46.79-.77 1.1-.62.62-1.51.52-2.05-.19-.36-.48-.5-1.04-.58-1.63-.02-.11-.04-.22-.14-.34l-.25.5c-.53.97-1.21 1.78-2.36 2.02-.71.14-1.43.12-2.1-.17-.22-.1-.54-.39-.52-.53.06-.29.31-.55.52-.8.04-.05.26 0 .38.07.22.11.41.3.63.39.51.22.92.01 1.07-.52.14-.47.06-.91-.25-1.27-.38-.44-.79-.85-1.23-1.31l-.25.37c-.46.75-.91 1.51-1.37 2.25-.33.54-.73 1.03-1.29 1.36-.73.42-1.34.21-1.52-.62-.13-.63-.15-1.3-.15-1.95 0-.95.06-1.9.09-2.85l-.04-.37-.39.38c-.74.94-1.19 2.03-1.51 3.17-.2.7-.35 1.41-.49 2.12-.05.27-.18.33-.41.32-.81-.04-1.01-.23-1.01-1.07 0-1.88.01-3.76.02-5.64 0-.3.13-.41.42-.36l.32.06c.53.14.58.2.58.76v2.46c0 .09.01.18.08.29.09-.22.15-.46.26-.67.37-.74.7-1.52 1.15-2.2.54-.81 1.18-.88 2.01-.38.34.2.5.48.48.88-.05 1.09-.08 2.19-.1 3.28 0 .32.02.64.08.95.07.32.29.38.52.15.23-.24.45-.5.62-.78.43-.7.83-1.42 1.25-2.12.11-.17.07-.29-.04-.44-.35-.5-.35-1.02-.06-1.55.3-.55.8-.81 1.4-.84.47-.02.73.25.64.72-.07.35-.26.68-.41 1.01-.07.16-.2.29-.32.46.26.19.51.37.75.56.32.26.65.52.96.8.52.47.79 1.06.7 1.8.69-.58 1.16-1.28 1.19-2.18.03-1.03.01-2.07.03-3.11 0-.24-.07-.34-.32-.33-.38.02-.76 0-1.14 0-.23 0-.32-.1-.32-.32-.02-.55.2-.77.75-.75.26 0 .52 0 .78.02.24.02.34-.06.34-.32 0-.49.03-.97.05-1.46.02-.38.13-.47.52-.44l.21.03c.84.15.88.2.84 1.05-.02.39 0 .78 0 1.22l1.69.09c.49.03.62.22.4.66-.06.12-.24.23-.38.24-.5.04-1 .05-1.5.05-.21 0-.29.07-.3.29-.03 1.56-.08 3.11-.08 4.67 0 .37.1.75.23 1.11.13.36.45.45.75.22.21-.16.41-.37.54-.6.31-.54.52-1.11.52-1.75 0-.95.21-1.87.7-2.7.54-.9 1.44-1.28 2.26-.92.32.14.59.42.82.59zm6.96 2.52c-.12-.53-.18-1.1-.38-1.6-.24-.6-.83-.71-1.3-.26-.25.25-.45.58-.58.92-.3.81-.37 1.67-.25 2.53.05.39.14.8.31 1.15.3.61.88.67 1.32.14.21-.25.39-.55.47-.86.17-.65.26-1.32.4-2.02zm9.33.95h.06c0 .14-.02.29 0 .43.09.45.14.92.32 1.34.29.66.9.71 1.35.15.17-.22.32-.48.41-.74.31-.85.41-1.73.3-2.63-.05-.38-.15-.78-.33-1.11-.32-.57-.98-.62-1.39-.1-.21.26-.37.59-.45.91-.13.57-.18 1.17-.27 1.75zm-18.69-.12l.1.01c0 .25-.04.51 0 .75.09.41.18.84.38 1.2.27.49.78.52 1.16.1.22-.25.41-.56.52-.88.35-.98.41-2 .23-3.02-.11-.66-.48-1.09-.92-1.13-.46-.04-.92.3-1.11.98-.18.65-.25 1.32-.37 1.98zm9.51 3.96l-.16-.05c-.85.76-1.63 1.57-2.03 2.68l-.04.17c-.14.7.37 1.2 1.07 1.06.53-.11.81-.5.87-.97.14-.96.2-1.92.29-2.89zM27.56 3.8l-.45.54c-.83 1.07-1.14 2.29-.95 3.62.05.35.27.68.4 1.02.04.11.05.24.07.36-.12 0-.25.04-.36 0-.98-.32-1.63-1.45-1.42-2.52.29-1.51 1.08-2.7 2.36-3.55.54-.36 1.09-.43 1.68-.13.23.12.36.28.36.56v8.17c0 .68-.08 1.36-.38 1.98-.25.53-.6.97-1.16 1.21-.1.04-.22.02-.34.03 0-.1-.04-.21 0-.3.34-.94.35-1.91.35-2.89 0-2.53.02-5.07.03-7.6l-.02-.41-.15-.09z" />
+                    </svg></a>
+                </li>
+              </ul>
+
+              <!-- 下部リンク -->
+              <ul class="navbar-nav ms-auto py-2">
+                <li><a class="nav-link" href="#"><strong>S-HOUSEについて</strong><br>About</a></li>
+                <li><a class="nav-link" href="#"><strong>客室について</strong><br>Room</a></li>
+                <li><a class="nav-link" href="#"><strong>ご利用案内</strong><br>User Guide</a></li>
+                <li><a class="nav-link" href="#"><strong>淡路島観光</strong><br>Discover</a></li>
+                <li><a class="nav-link" href="#"><strong>体験する</strong><br>Experience</a></li>
+                <li class="yohaku"><a class="nav-link" href="#"><strong>お知らせ・イベント</strong><br>News・Events</a></li>
+                <li class="yoyaku"><a class="nav-link" href="#"><img src="./IMG/yoyaku.svg" alt="img"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="spNav">
+      <!-- ナビゲーションメニュー -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="d-lg-flex w-100">
+          <ul class="navbar-nav ms-auto py-2">
+            <li class="yoyaku"><a class="nav-link" href="#"><img src="./IMG/yoyaku.svg" alt="img"></a></li>
+            <li><a class="nav-link" href="#"><strong>S-HOUSEについて</strong><br>About</a></li>
+            <li><a class="nav-link" href="#"><strong>客室について</strong><br>Room</a></li>
+            <li><a class="nav-link" href="#"><strong>ご利用案内</strong><br>User Guide</a></li>
+            <li><a class="nav-link" href="#"><strong>淡路島観光</strong><br>Discover</a></li>
+            <li><a class="nav-link" href="#"><strong>体験する</strong><br>Experience</a></li>
+            <li><a class="nav-link" href="#"><strong>お知らせ・イベント</strong><br>News・Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ACCESS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 82 19" class="instagram">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #1a1a1a;
+                      }
+
+                      .cls-1,
+                      .cls-2 {
+                        stroke-width: 0px;
+                      }
+
+                      .cls-2 {
+                        fill: #fff;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-2" d="M-911-29h1180v128h-1180z" />
+                  <path class="cls-1"
+                    d="M12.24 2.86c-.52 0-.94.42-.94.94s.42.94.94.94.94-.42.94-.94-.42-.94-.94-.94zM8.07 4.06c-2.17 0-3.94 1.77-3.94 3.94s1.77 3.94 3.94 3.94 3.94-1.77 3.94-3.94-1.77-3.94-3.94-3.94zm0 6.46c-1.39 0-2.52-1.13-2.52-2.52s1.13-2.52 2.52-2.52 2.52 1.13 2.52 2.52-1.13 2.52-2.52 2.52zM11.19 16h-6.39c-2.65 0-4.81-2.16-4.81-4.81v-6.39c.01-2.64 2.17-4.8 4.82-4.8h6.39c2.65 0 4.81 2.16 4.81 4.81v6.39c0 2.65-2.16 4.81-4.81 4.81zm-6.38-14.49c-1.82 0-3.3 1.48-3.3 3.3v6.39c0 1.82 1.48 3.3 3.3 3.3h6.39c1.82 0 3.3-1.48 3.3-3.3v-6.39c0-1.82-1.48-3.3-3.3-3.3h-6.39zM50.51 7.25c.12-.14.26-.44.39-.43.35.02.7.15 1.03.28.07.03.1.25.1.38 0 1.34-.04 2.69-.03 4.03 0 .33.07.67.17.98.18.57.64.64 1.01.18.3-.37.45-.78.39-1.28-.13-1.03-.05-2.04.31-3.02.22-.59.55-1.1 1.06-1.49.68-.52 1.56-.44 2.15.2l.2.23.07-.04c.08-.54.14-.58.69-.47l.34.09c.29.07.39.25.38.55-.03 1.39-.04 2.78-.05 4.18v.37l.12.05.08-.16c.63-.94 1.17-1.93 1.48-3.03.07-.25.09-.45-.12-.67-.31-.33-.26-.75-.1-1.14.14-.33.4-.53.76-.57.55-.06.84.22.82.76l-.03.35c.32-.05.62-.1.92-.16l.66-.13c.72-.08 1.04.3.89 1.01-.15.68-.29 1.37-.39 2.06-.11.71-.04 1.41.23 2.07.09.22.32.5.5.52.21.02.49-.19.67-.37.22-.24.32-.55.26-.92-.2-1.13-.13-2.25.27-3.34.23-.64.57-1.21 1.2-1.54.72-.38 1.54-.21 2.06.42l.16.19c.08-.18.14-.48.22-.48.33-.02.67.02.99.1.26.06.28.3.28.55-.01 1.4-.02 2.81 0 4.21 0 .29.09.59.2.86.16.4.56.48.86.17.42-.44.72-.94.72-1.58 0-1.36 0-2.71.01-4.07 0-.45.06-.5.49-.43l.14.02c.7.09.74.14.74.85v1.91l.09.02.18-.5c.22-.59.43-1.19.67-1.77.23-.55.4-.64.88-.54.61.13.92.45.94.95.04.93.08 1.85.13 2.78 0 .07.02.14.09.22l.08-.22c.32-1.07.61-2.15.95-3.21.18-.55.45-.65 1-.48.19.06.38.14.55.24.29.16.42.41.42.76-.02 1.18-.04 2.35 0 3.53.01.42.13.85.27 1.24.06.16.29.36.45.37.16 0 .4-.17.48-.33.16-.32.23-.7.36-1.04.05-.12.18-.2.28-.3.05.12.16.25.14.35-.07.47-.13.94-.3 1.38-.2.52-.62.83-1.21.84-.59.01-1.03-.25-1.31-.77-.37-.66-.46-1.4-.49-2.14-.03-.7-.01-1.4-.02-2.11 0-.13 0-.25-.08-.41-.06.1-.13.2-.17.31-.54 1.23-.81 2.53-.92 3.87-.02.24.09.54-.27.66-.37.12-.8.06-.98-.29-.2-.39-.36-.83-.41-1.27-.12-.98-.16-1.97-.23-2.95l-.06-.38c-.14.2-.24.31-.3.43-.56 1.11-.78 2.31-.88 3.54l-.06 1.07c0 .09 0 .21-.06.27-.32.33-.71.18-1.08.13-.25-.04-.45-.15-.47-.45l-.05-.58c-.45.65-.88 1.19-1.67 1.07-.77-.11-1.1-.68-1.29-1.46-.45.76-.97 1.31-1.81 1.44-.91.15-1.47-.3-1.9-1.09l-.22.34c-.59.93-1.65 1.04-2.41.22-.49-.53-.75-1.18-.73-1.89.02-.86.15-1.72.24-2.59l.08-.43c-.38 0-.72-.02-1.06.01-.08 0-.19.14-.22.23-.55 1.59-1.44 2.96-2.47 4.27-.11.14-.17.36-.18.54-.06 1.07-.06 2.14-.16 3.2-.06.64-.32 1.24-.79 1.72-.67.67-1.73.84-2.57.42-.76-.38-1.12-1.27-.71-2.07.3-.59.74-1.13 1.19-1.63.45-.5.96-.96 1.48-1.39.35-.28.34-.58.2-1-.47.65-1.04 1.09-1.83 1.15-.85.07-1.31-.5-1.75-1.15-.4.61-.78 1.24-1.63 1.13-.8-.11-1.15-.68-1.36-1.48-.5.93-1.19 1.53-2.22 1.48-1.12-.06-1.47-.95-1.78-1.91-.08.17-.12.28-.19.37-.25.37-.46.79-.77 1.1-.62.62-1.51.52-2.05-.19-.36-.48-.5-1.04-.58-1.63-.02-.11-.04-.22-.14-.34l-.25.5c-.53.97-1.21 1.78-2.36 2.02-.71.14-1.43.12-2.1-.17-.22-.1-.54-.39-.52-.53.06-.29.31-.55.52-.8.04-.05.26 0 .38.07.22.11.41.3.63.39.51.22.92.01 1.07-.52.14-.47.06-.91-.25-1.27-.38-.44-.79-.85-1.23-1.31l-.25.37c-.46.75-.91 1.51-1.37 2.25-.33.54-.73 1.03-1.29 1.36-.73.42-1.34.21-1.52-.62-.13-.63-.15-1.3-.15-1.95 0-.95.06-1.9.09-2.85l-.04-.37-.39.38c-.74.94-1.19 2.03-1.51 3.17-.2.7-.35 1.41-.49 2.12-.05.27-.18.33-.41.32-.81-.04-1.01-.23-1.01-1.07 0-1.88.01-3.76.02-5.64 0-.3.13-.41.42-.36l.32.06c.53.14.58.2.58.76v2.46c0 .09.01.18.08.29.09-.22.15-.46.26-.67.37-.74.7-1.52 1.15-2.2.54-.81 1.18-.88 2.01-.38.34.2.5.48.48.88-.05 1.09-.08 2.19-.1 3.28 0 .32.02.64.08.95.07.32.29.38.52.15.23-.24.45-.5.62-.78.43-.7.83-1.42 1.25-2.12.11-.17.07-.29-.04-.44-.35-.5-.35-1.02-.06-1.55.3-.55.8-.81 1.4-.84.47-.02.73.25.64.72-.07.35-.26.68-.41 1.01-.07.16-.2.29-.32.46.26.19.51.37.75.56.32.26.65.52.96.8.52.47.79 1.06.7 1.8.69-.58 1.16-1.28 1.19-2.18.03-1.03.01-2.07.03-3.11 0-.24-.07-.34-.32-.33-.38.02-.76 0-1.14 0-.23 0-.32-.1-.32-.32-.02-.55.2-.77.75-.75.26 0 .52 0 .78.02.24.02.34-.06.34-.32 0-.49.03-.97.05-1.46.02-.38.13-.47.52-.44l.21.03c.84.15.88.2.84 1.05-.02.39 0 .78 0 1.22l1.69.09c.49.03.62.22.4.66-.06.12-.24.23-.38.24-.5.04-1 .05-1.5.05-.21 0-.29.07-.3.29-.03 1.56-.08 3.11-.08 4.67 0 .37.1.75.23 1.11.13.36.45.45.75.22.21-.16.41-.37.54-.6.31-.54.52-1.11.52-1.75 0-.95.21-1.87.7-2.7.54-.9 1.44-1.28 2.26-.92.32.14.59.42.82.59zm6.96 2.52c-.12-.53-.18-1.1-.38-1.6-.24-.6-.83-.71-1.3-.26-.25.25-.45.58-.58.92-.3.81-.37 1.67-.25 2.53.05.39.14.8.31 1.15.3.61.88.67 1.32.14.21-.25.39-.55.47-.86.17-.65.26-1.32.4-2.02zm9.33.95h.06c0 .14-.02.29 0 .43.09.45.14.92.32 1.34.29.66.9.71 1.35.15.17-.22.32-.48.41-.74.31-.85.41-1.73.3-2.63-.05-.38-.15-.78-.33-1.11-.32-.57-.98-.62-1.39-.1-.21.26-.37.59-.45.91-.13.57-.18 1.17-.27 1.75zm-18.69-.12l.1.01c0 .25-.04.51 0 .75.09.41.18.84.38 1.2.27.49.78.52 1.16.1.22-.25.41-.56.52-.88.35-.98.41-2 .23-3.02-.11-.66-.48-1.09-.92-1.13-.46-.04-.92.3-1.11.98-.18.65-.25 1.32-.37 1.98zm9.51 3.96l-.16-.05c-.85.76-1.63 1.57-2.03 2.68l-.04.17c-.14.7.37 1.2 1.07 1.06.53-.11.81-.5.87-.97.14-.96.2-1.92.29-2.89zM27.56 3.8l-.45.54c-.83 1.07-1.14 2.29-.95 3.62.05.35.27.68.4 1.02.04.11.05.24.07.36-.12 0-.25.04-.36 0-.98-.32-1.63-1.45-1.42-2.52.29-1.51 1.08-2.7 2.36-3.55.54-.36 1.09-.43 1.68-.13.23.12.36.28.36.56v8.17c0 .68-.08 1.36-.38 1.98-.25.53-.6.97-1.16 1.21-.1.04-.22.02-.34.03 0-.1-.04-.21 0-.3.34-.94.35-1.91.35-2.89 0-2.53.02-5.07.03-7.6l-.02-.41-.15-.09z" />
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="container-fluid">
+    <!-- ヒーローセクション -->
+    <section class="container text-section"> <!-- テキストコンテンツ -->
+      <div class="col-md-10 hero-content">
+        <h1 class="hero-title">S-HOUSE in Awaji</h1>
+        <p class="hero-subtitle">A tranquil retreat embraced by nature.</p>
+      </div>
+      <p><img src="./IMG/日本文紹介.svg" alt="img"></p>
+    </section>
+
+    <!-- Aboutセクション -->
+    <section class="allAbout">
+      <!-- スライダー -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="IMG/Hero-IMG1.webp" alt="img"></div>
+          <div class="swiper-slide"><img src="IMG/Hero-IMG2.webp" alt="img"></div>
+          <div class="swiper-slide"><img src="IMG/Hero-IMG3.webp" alt="img"></div>
+          <div class="swiper-slide"><img src="IMG/Hero-IMG4.webp" alt="img"></div>
+          <div class="swiper-slide"><img src="IMG/Hero-IMG5.webp" alt="img"></div>
+          <div class="swiper-slide"><img src="IMG/Hero-IMG6.webp" alt="img"></div>
+        </div>
+      </div>
+      <!-- スライダー -->
+
+      <!-- About -->
+      <div class="container py-8 about">
+        <div class="row align-items-center">
+          <p>淡路島の旅館で、心休まるひとときを過ごしませんか？<br>
+            目の前に広がる海の絶景、季節ごとに彩る美しい自然が、日々の喧騒を忘れさせてくれます。<br>
+            地元で採れた新鮮な海の幸や野菜を使ったお食事は、心も体も満たしてくれる贅沢な味わい。<br>
+            温泉でゆっくりと癒されながら、淡路島ならではの静けさに包まれる宿泊体験を。<br>
+            大切な人と、あるいはひとり旅で、自分だけの特別な時間をお楽しみください。</p>
+        </div>
+      </div>
+
+      <div class="container py-6 aboutEnglish">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-12 mb-3">
+            <img src="./IMG/View.webp" alt="img" class="img-fluid">
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <p>Experience a tranquil stay at a traditional inn on Awaji Island.<br>
+              Marvel at breathtaking ocean views and the vibrant seasonal beauty surrounding you, offering a peaceful
+              escape from the bustle of daily life.<br>
+              Savor the exquisite flavors of fresh seafood and locally grown vegetables, filling both body and soul.
+              Relax in soothing hot springs, and enjoy a serene stay unique to Awaji Island.
+              Whether with loved ones or on a solo journey, find a special moment just for yourself.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-12 py-3">
+            <div class="aboutLink">
+              <a href="#">
+                <img src="./IMG/About.svg" alt="img">
+                <img src="./IMG/Arrow.svg" alt="Arrow" class="arrow">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stay -->
+      <div class="container py-6 stay">
+        <div class="row align-items-center">
+          <div class="col-lg-2 col-sm-6 mb-3">
+            <img src="/IMG/Stay.svg" alt="img">
+            <h3>泊まる</h3>
+            <p>Stay</p>
+          </div>
+          <div class="col-lg-4 col-sm-12 mb-3">
+            <p>
+              S-HOUSEは一日一組、一棟貸しの宿です。築50年の古民家で、ショートステイからロングステイまで、目的に応じた滞在をお楽しみいただけます。
+            </p>
+            <p>
+              S-HOUSE is a private rental accommodation that accommodates one group per day. Located in a 50-year-old
+              traditional house,
+              it offers stays tailored to your needs,
+              whether for a short getaway or a longer stay.
+            </p>
+            <div class="roomLink">
+              <a href="#">
+                <img src="./IMG/Room-Link.svg" alt="img">
+                <img src="./IMG/Arrow.svg" alt="Arrow" class="arrow">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 mb-3 order-first order-lg-3">
+            <img src="./IMG/Room.webp" alt="img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Visit -->
+      <div class="container-fluid visit">
+        <div class="col">
+          <video src="./IMG/Visit.mov" loop autoplay muted></video>
+        </div>
+        <div class="row awaji">
+          <div class="ps-4 text-column">
+            <h1>AWAJI</h1>
+            <img src="./IMG/AWAJI.svg" alt="img">
+          </div>
+          <div class="col-lg-2 ps-4 text-column">
+            <img src="./IMG/Visit.svg" alt="img">
+            <h3>淡路を知る</h3>
+            <p>Visit</p>
+          </div>
+          <div class="col-lg-4">
+            <p class="japanese-text">
+              淡路で暮らすように過ごしてほしいという思いから、淡路島おすすめの観光スポット、穴場、飲食店などをご希望に沿った形でご案内します。お気軽にご相談ください。
+            </p>
+            <p class="english-text">
+              From the desire for you to experience life in Awaji, we will guide you to recommended sightseeing spots,
+              hidden gems, restaurants, and more, tailored to your preferences. Please feel free to reach out for any
+              inquiries.
+            </p>
+          </div>
+          <div class="col-lg-6 image-column text">
+            <img src="./IMG/Seto-Bridge.svg" alt="img" class="bridge-image">
+          </div>
+          <div class="discoverLink">
+            <a href="#">
+              <img src="./IMG/Discover.svg" alt="img" class="room">
+              <img src="./IMG/Arrow.svg" alt="Arrow" class="arrow">
+            </a>
+          </div>
+        </div>
+        <!-- カルーセル -->
+        <div class="swiper-container calslide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG1.webp" alt="img"></div>
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG2.webp" alt="img"></div>
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG3.webp" alt="img"></div>
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG4.webp" alt="img"></div>
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG5.webp" alt="img"></div>
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG6.webp" alt="img"></div>
+            <div class="swiper-slide"><img src="./IMG/Slider-IMG7.webp" alt="img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 体験セクション -->
+    <section class="container py-6 experience">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-sm-6 mb-3">
+          <img src="/IMG/taiken.svg" alt="img">
+          <h3>淡路民体験</h3>
+          <p>Experience</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 mb-3">
+          <p>
+            島ならではの素晴らしい景観を体験できる様々なプログラムをご用意しております。<br>
+            体験中はガイドの方々親切にサポートしてくれるので、ユニークな体験をお楽しみできます。<br>
+            ご予約時に合わせてお申し込みください。</p>
+          <p>
+            We offer a variety of programs that allow you to experience the island’s unique and stunning scenery. During
+            each experience, our friendly guides will provide attentive support, ensuring you enjoy a truly unique
+            adventure. Please feel free to request these programs when making your reservation. </p>
+          <div class="experienceLink">
+            <a href="#">
+              <img src="./IMG/Experience.svg" alt="img">
+              <img src="./IMG/Arrow.svg" alt="Arrow" class="arrow">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-3 order-lg-3">
+          <img src="./IMG/Experience1.webp" alt="img">
+          <p class="japanese-text">SUP体験</p>
+          <p class="english-text">SUP Experience</p>
+          <img src="./IMG/Experience2.webp" alt="img">
+          <p class="japanese-text">淡路島産玉ねぎ収穫体験</p>
+          <p class="english-text">Awaji Onion Harvest Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsセクション -->
+    <section class="news">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-2 col-sm-6 mb-3">
+            <img src="/IMG/Event.svg" alt="img" class="eventImage">
+            <h3>お知らせ・イベント</h3>
+            <p>News & Events</p>
+            <div class="newsLink">
+              <a href="#" class="d-inline-flex align-items-center">
+                <img src="./IMG/News.svg" alt="img">
+                <img src="./IMG/Arrow.svg" alt="Arrow" class="arrow">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12 mb-3">
+            <ul class="nav nav-tabs justify-content-center justify-content-md-end mb-3" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab"
+                  aria-selected="true">
+                  お知らせ
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab"
+                  aria-selected="false">
+                  イベント
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab"
+                  aria-selected="false">
+                  全て
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <!-- News Tab -->
+              <div class="tab-pane fade show active" id="news" role="tabpanel">
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between border-bottom py-2">
+                    <span>xxxx.xx.xx お知らせ</span>
+                    <span>関西テレビで紹介されました！</span>
+                  </li>
+                  <li class="d-flex justify-content-between border-bottom py-2">
+                    <span>xxxx.xx.xx お知らせ</span>
+                    <span>〇〇さんが訪問！</span>
+                  </li>
+                  <li class="d-flex justify-content-between border-bottom py-2">
+                    <span>xxxx.xx.xx お知らせ</span>
+                    <span>xx.xxより玉ねぎの収穫体験が始まります。</span>
+                  </li>
+                  <li class="d-flex justify-content-between border-bottom py-2">
+                    <span>xxxx.xx.xx お知らせ</span>
+                    <span>△△ファームさんの今月の休業日</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Events Tab -->
+              <div class="tab-pane fade" id="events" role="tabpanel">
+                <p>イベントの情報がここに表示されます。</p>
+              </div>
+
+              <!-- All Tab -->
+              <div class="tab-pane fade" id="all" role="tabpanel">
+                <p>全ての情報がここに表示されます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div class="container-fluid footerTop">
+    <div class="text-center">
+      <h1 class="my-4">S - H</h1>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- 左側の住所部分 -->
+        <div class="col-md-6 info">
+          <p class="mb-1 address">〒656-2306 兵庫県淡路市夢舞台777-777</p>
+          <p class="mb-1">777-777, Yumebutai, Awaji-city, Hyogo, 656-2306, Japan</p>
+          <p class="mb-1">
+            <a href="#">GoogleMap</a>
+          </p>
+          <p class="mb-1">TEL: 0799-00-0000（平日9時〜20時）</p>
+          <p>Check-in：16時以降　Check-out：10時</p>
+        </div>
+
+        <!-- 右側のメニュ部分 -->
+        <div class="col-md-6 text-md-end">
+          <ul>
+            <li><a href="#">アクセス</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">特定商取引法に基づく表示</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="text-center">
+    <p class="mb-0 py-3">&copy; S-HOUSE All Rights Reserved.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+  <!-- スワイパー -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const topSwiper = new Swiper('.swiper', {
+      // Optional parameters
+      centeredSlides: true,
+      loop: true,
+      speed: 3000,
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+
+    const swiper = new Swiper('.calslide', {
+      loop: true, // ループ有効
+      slidesPerView: 1.2, // 一度に表示する枚数
+      breakpoints: {
+        572: {
+          slidesPerView: 1.2,
+        },
+        768: {
+          slidesPerView: 2.2,
+        },
+        1200: {
+          slidesPerView: 3.5,
+        },
+      },
+      speed: 6000, // ループの時間
+      allowTouchMove: true, // スワイプ無効
+      autoplay: {
+        delay: 0, // 途切れなくループ
+      },
+    });
+  </script>
+  <!-- スワイパーここまで -->
+</body>
+
+</html>
