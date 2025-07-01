@@ -1,0 +1,997 @@
+// カラーの定義
+$body: #F6F4EB;
+$copylight: #262626;
+$text: #1A1A1A;
+
+// フォントの定義
+$jp-font: 'YuGothic', sans-serif;
+$en-font: 'Helvetica Neue', sans-serif;
+
+// デフォルトのスタイル
+body {
+    font-family: $en-font;
+    font-family: $jp-font;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+}
+
+// ヘッダーPCレイアウト
+@media (min-width: 1200px) {
+
+    header {
+        position: relative;
+        position: sticky !important;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        h1 {
+            position: absolute;
+            top: 45px;
+            left: 75px;
+
+            @media (max-width: 1200px) {
+                position: absolute;
+                top: 15px;
+                left: 40px;
+            }
+        }
+
+        #pcNav {
+            display: block;
+
+            .culumn {
+                position: relative;
+                margin-top: 1.5%;
+
+                .justify-content-end {
+                    position: absolute;
+                    right: 20px;
+                    top: 0;
+
+                    .nav-item {
+                        letter-spacing: 0.2rem;
+                        font-weight: 700;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 15px;
+                            top: 0;
+                            bottom: 0;
+                            border-left: solid 2px $text;
+                        }
+
+                        .nav-link {
+                            padding: 0 0 0 30px;
+
+                            &:hover {
+                                opacity: 0.6;
+                                transition: 0.35s;
+                            }
+
+                            .instagram {
+                                width: 30%;
+                                height: auto;
+
+                                &:hover {
+                                    opacity: 0.6;
+                                    transition: 0.35s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .py-2 {
+                    margin-top: 30px;
+                    position: relative;
+
+                    .nav-link {
+                        letter-spacing: 0.07em;
+                        white-space: nowrap;
+                        padding-right: 20px;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 90%;
+                            height: 1px;
+                            background-color: $text;
+                            transition: all .3s;
+                            transform: scale(0, 1);
+                            transform-origin: center top;
+                        }
+
+                        &:hover {
+
+                            &::after {
+                                transform: scale(1, 1);
+                            }
+                        }
+                    }
+                }
+
+                .navbar-nav {
+
+                    img {
+                        width: 65%;
+                        height: auto;
+                    }
+
+                    .yohaku {
+                        margin-right: 180px;
+                    }
+
+                    .yoyaku {
+                        position: absolute;
+                        width: 155px;
+                        height: 85px;
+                        text-align: center;
+                        right: 0;
+                        bottom: 14px;
+                        background-color: $copylight;
+                        padding: 1%;
+                        border-radius: 10px 0 0 10px;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            background-color: #41badf;
+                        }
+
+                        .nav-link {
+
+                            &::after {
+                                content: none;
+                            }
+                        }
+
+                        img {
+                            width: 90%;
+                        }
+                    }
+                }
+
+            }
+
+            // 宿泊予約ボタンのスタイル
+            .btn-info {
+                margin-right: 0;
+
+                img {
+                    padding-right: 3%;
+                }
+            }
+
+        }
+
+        #spNav {
+            display: none;
+        }
+    }
+
+}
+
+// ヘッダーSPレイアウト
+@media (max-width: 1200px) {
+
+    header {
+        position: sticky !important;
+        top: 0;
+        z-index: 1000;
+        background-color: #fff;
+
+        h1 {
+            margin-left: 50px;
+            font-size: 48px;
+        }
+
+        .navbar-toggler {
+            margin-right: 50px;
+        }
+
+        #spNav {
+            display: block;
+            margin: auto;
+
+            .navbar-collapse {
+                height: 100vh;
+
+                &.show {
+                    height: 100vh;
+                }
+
+                .navbar-nav {
+
+                    .nav-link {
+                        text-align: center;
+                        margin-bottom: 5%;
+                    }
+
+                    .yoyaku {
+                        width: 155px;
+                        height: 85px;
+                        text-align: center;
+                        background-color: $copylight;
+                        padding: 1%;
+                        border-radius: 10px;
+                        transition: all .3s ease-in-out;
+                        margin-bottom: 5%;
+
+                        &:hover {
+                            background-color: #41badf;
+                        }
+
+                        .nav-link {
+
+                            &::after {
+                                content: none;
+                            }
+                        }
+
+                        img {
+                            width: 90%;
+                        }
+                    }
+
+                    .nav-item {
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            border-top: 1px solid $text;
+                            width: 500px;
+                            height: 1px;
+                            left: 50%; // 左端を中央に設定
+                            transform: translateX(-50%); // 中央寄せ
+                        }
+                    }
+                }
+            }
+        }
+
+        #pcNav {
+            display: none;
+        }
+    }
+}
+
+.allAbout {
+    background-color: $body;
+}
+
+// ヒーローセクション全体の背景色とパディング
+.text-section {
+    padding: 3rem 0;
+    position: relative;
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: 0.2rem;
+
+        @media (max-width: 1200px) {
+            font-size: 20px;
+        }
+    }
+
+    .hero-subtitle {
+        font-size: 36px;
+        letter-spacing: 0.2rem;
+        color: $text;
+
+        @media (max-width: 1200px) {
+            font-size: 20px;
+        }
+    }
+
+    img {
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        right: 45px;
+        width: 200px;
+
+        @media (max-width: 1200px) {
+            width: 125px;
+            top: 130px;
+            right: 15px;
+        }
+    }
+}
+
+.swiper {
+    width: 85%;
+    margin-left: 0 !important;
+
+    .swiper-wrapper {
+        display: flex;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    }
+}
+
+// Aboutセクションレイアウト
+.about {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-image: url(/IMG/Onion.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+
+    @media (max-width: 992px) {
+        background-position: top right;
+        background-size: 300px 200px;
+    }
+
+    p {
+        margin-top: 7%;
+        line-height: 3rem;
+        letter-spacing: 0.35rem;
+        font-weight: 600;
+    }
+}
+
+.aboutEnglish {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-image: url(/IMG/iland.svg);
+    background-repeat: no-repeat;
+    background-position: right 300px;
+    background-size: 700px 500px;
+
+    @media (max-width: 992px) {
+        background-position: right 75%;
+        background-size: 400px 400px;
+    }
+
+    .img-fluid {
+        width: auto;
+        height: 550px;
+    }
+
+    p {
+        margin-top: 7%;
+        margin-bottom: 7%;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+    }
+
+    .py-3 {
+        margin-top: 5%;
+        margin-bottom: 3%;
+
+        .aboutLink {
+            position: relative;
+
+            .arrow {
+                position: absolute;
+                top: 0;
+                left: 3px;
+                transition: left 0.7s ease;
+
+                &:hover {
+                    left: 15px;
+                }
+
+                @media (max-width: 1200px) {
+                    left: 5px;
+                    transition: none;
+
+                    &:hover {
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 宿泊セクションレイアウト
+.stay {
+
+    .col-lg-2 {
+
+        img {
+            display: block;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        h3 {
+            display: none;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: none;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+    }
+
+    p {
+        margin-top: 7%;
+        margin-bottom: 10%;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+    }
+
+    .roomLink {
+        position: relative;
+
+        .arrow {
+            position: absolute;
+            top: 0;
+            left: -110px;
+            transition: left 0.7s ease;
+
+            @media (max-width: 1200px) {
+                left: -95px;
+            }
+
+            &:hover {
+                left: -95px;
+            }
+        }
+    }
+
+    .col-lg-6 {
+        padding-left: 7%;
+
+        @media (max-width: 1200px) {
+            padding-left: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 淡路島セクションレイアウト
+.visit {
+
+    video {
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    .awaji {
+        margin-left: 5%;
+        position: relative;
+
+        .ps-4 {
+
+            h1 {
+                font-family: $en-font;
+                font-weight: 300;
+                letter-spacing: 0.7rem;
+                margin-bottom: 5%;
+
+                @media (max-width: 992px) {
+                    display: none;
+                }
+            }
+
+            img {
+                display: none;
+
+                @media (max-width: 992px) {
+                    display: block;
+                    margin: auto;
+                    padding-bottom: 7%;
+                }
+            }
+        }
+
+        .col-lg-2 {
+
+            img {
+                display: block;
+
+                @media (max-width: 992px) {
+                    display: none;
+                }
+            }
+
+            h3 {
+                display: block;
+
+                @media (min-width: 992px) {
+                    display: none;
+                }
+            }
+
+            p {
+                display: block;
+
+                @media (min-width: 992px) {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            margin-top: 7%;
+            margin-bottom: 10%;
+            line-height: 3rem;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+
+            @media (max-width: 992px) {
+                margin-top: 0;
+                margin-bottom: 2%;
+            }
+        }
+
+        .japanese-text {
+
+            @media (max-width: 992px) {
+                margin-bottom: 3%;
+            }
+        }
+
+        .bridge-image {
+            position: absolute;
+            top: 0;
+            right: 85px;
+            width: 30%;
+            height: auto;
+
+            @media (max-width: 1200px) {
+                width: 40%;
+            }
+
+            @media (max-width: 768px) {
+                top: 50px;
+            }
+        }
+
+        .discoverLink {
+            position: relative;
+            margin-bottom: 5%;
+
+            @media (max-width: 992px) {
+                position: initial;
+            }
+
+
+            .room {
+                position: absolute;
+                bottom: 150px;
+                right: 240px;
+
+                @media (max-width: 1200px) {
+                    right: 190px;
+                }
+
+                @media (max-width: 992px) {
+                    position: initial;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                bottom: 150px;
+                right: 250px;
+                transition: right 0.7s ease;
+
+                &:hover {
+                    right: 235px;
+                }
+
+                @media (max-width: 1200px) {
+                    right: 200px;
+
+                    &:hover {
+                        right: 185px;
+                    }
+                }
+
+                @media (max-width: 992px) {
+                    bottom: 5%;
+                    left: -11%;
+                    transition: none;
+
+                    &:hover {
+                        left: -11%;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    bottom: 4%;
+                    left: -14%;
+                    transition: none;
+
+                    &:hover {
+                        left: -14%;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    bottom: 3%;
+                    left: -17%;
+                    transition: none;
+
+                    &:hover {
+                        left: -17%;
+                    }
+                }
+            }
+        }
+    }
+
+    .calslide {
+        width: 100%;
+        overflow: hidden;
+
+        .swiper-slide {
+
+            img {
+                height: 300px;
+                width: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// 体験セクションレイアウト
+.experience {
+    padding-bottom: 3%;
+
+    p {
+        margin-top: 7%;
+        margin-bottom: 10%;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+    }
+
+    .col-lg-2 {
+
+        img {
+            display: block;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        h3 {
+            display: none;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: none;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+    }
+
+    .experienceLink {
+        position: relative;
+        margin-bottom: 3%;
+
+        .arrow {
+            position: absolute;
+            top: 0;
+            left: -10px;
+            transition: left 0.7s ease;
+
+            &:hover {
+                left: 5px;
+            }
+
+            @media (max-width: 1200px) {
+                left: -10px;
+                transition: none;
+
+                &:hover {
+                    left: -10px;
+                }
+            }
+        }
+    }
+
+    .col-lg-6 {
+        padding-left: 7%;
+        text-align: center;
+
+        @media (max-width: 1200px) {
+            padding-left: 0;
+        }
+
+        img {
+            width: 103%;
+        }
+
+        .japanese-text {
+            margin-top: 2%;
+            margin-bottom: 0;
+        }
+
+        .english-text {
+            margin-top: 0;
+        }
+    }
+}
+
+// Newsセクションレイアウト
+.news {
+    padding-bottom: 3%;
+    background-color: $body;
+
+    p {
+        margin-top: 7%;
+        margin-bottom: 10%;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+    }
+
+    .col-lg-2 {
+
+        .eventImage {
+            display: block;
+            padding-bottom: 8%;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        h3 {
+            display: none;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: none;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+
+        .newsLink {
+            position: relative;
+            margin-bottom: 3%;
+            margin-top: 3%;
+
+            .arrow {
+                position: absolute;
+                top: 0;
+                right: -50px;
+                transition: right 0.7s ease;
+
+                &:hover {
+                    right: -65px;
+                }
+
+                @media (max-width: 1400px) {
+                    left: -85px;
+                    transition: none;
+
+                    &:hover {
+                        left: -85px;
+                    }
+                }
+            }
+        }
+    }
+
+    .col-lg-8 {
+
+        .nav {
+            border-bottom: 2px solid $text;
+
+            button {
+                width: 200px;
+                background-color: #F4F4F4;
+                color: $text;
+                border: none;
+                border-radius: 0px !important;
+                margin-bottom: 0;
+                margin-right: 3px;
+
+                @media (max-width: 992px) {
+                    width: 150px;
+                }
+
+                &[aria-selected="true"] {
+                    background-color: #4e4e4e;
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: #e0e0e0;
+                }
+            }
+        }
+
+        .tab-content {
+            width: 90%;
+            margin: auto;
+            padding-top: 4%;
+
+            li {
+                padding-top: 3% !important;
+                padding-bottom: 3% !important;
+                border-bottom: 1px solid $text !important;
+            }
+        }
+    }
+}
+
+.footerTop {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Footerセクションレイアウト
+footer {
+    background-image: url(/IMG/FooterIMG.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    position: relative;
+
+    .info {
+        position: absolute;
+        top: -80px;
+        left: 100px;
+
+        @media (max-width: 992px) {
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .address {
+            font-weight: 600;
+        }
+
+        a {
+            border-bottom: 1px solid $text;
+
+            &:hover {
+                color: #4e4e4e;
+            }
+        }
+    }
+
+    .text-md-end {
+        position: absolute;
+        top: -145px;
+        right: 200px;
+        writing-mode: vertical-rl;
+
+        @media (max-width: 992px) {
+            top: 180px;
+            left: 40%;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            top: 180px;
+            left: 25%;
+            transform: translateX(-50%);
+        }
+
+
+        ul {
+            text-align: start;
+
+            li {
+                font-weight: 600;
+                line-height: 3.5rem;
+                letter-spacing: 0.8rem;
+
+                a {
+
+                    @media (max-width: 992px) {
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        color: #4e4e4e;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mb-0 {
+    background-color: $copylight;
+    color: #fff;
+}

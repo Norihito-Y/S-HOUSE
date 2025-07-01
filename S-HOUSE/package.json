@@ -1,0 +1,22 @@
+{
+    "name": "s-house-website",
+    "version": "1.0.0",
+    "description": "S-HOUSE in Awaji - A tranquil retreat embraced by nature",
+    "main": "index.html",
+    "scripts": {
+        "dev": "npx serve .",
+        "build": "echo 'Static site - no build required'",
+        "start": "npx serve ."
+    },
+    "keywords": [
+        "hotel",
+        "awaji",
+        "japan",
+        "tourism"
+    ],
+    "author": "S-HOUSE",
+    "license": "MIT",
+    "devDependencies": {
+        "serve": "^14.2.1"
+    }
+}

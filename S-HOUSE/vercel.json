@@ -1,0 +1,43 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "*.html",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/IMG/(.*)",
+            "dest": "/IMG/$1"
+        },
+        {
+            "src": "/CSS/(.*)",
+            "dest": "/CSS/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/IMG/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        },
+        {
+            "source": "/CSS/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        }
+    ]
+}
